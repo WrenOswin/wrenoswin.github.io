@@ -118,6 +118,9 @@
         window.addEventListener('load', () => {
             window.scrollTo(0, 0);
             history.replaceState(null, '', '#home');
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = ''; // restore after
+            }, 100);
         });
 
         const navLinks = document.querySelectorAll('nav a');
