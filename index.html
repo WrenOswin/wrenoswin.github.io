@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Portfolio Website</title>
+
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#skills" >Skills</a>
+            <a href="#education" >Education</a>
+            <a href="#experience" >Experience</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="images/profiledp.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, it's <span>Wren</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Software Engineer with experience in OTT application development, automation testing, and computer vision–based project implementation. Strong problem-solving, adaptable across tech stacks, and proven ability to deliver in Agile environments.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/wren-oswin-39182b206" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/WrenOswin" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/wrenoswin/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="files\Wren_Resume.pdf" class="btn">My Resume</a>
+        </div>
+    </section>
+    <section id="skills">
+        <div id="skills-box">
+            <h1 class="skill-boxes">
+                Skills
+            </h1>
+        </div>
+    </section>
+    <section id="education">
+        <div id="education-box">
+            <h1 class="education-heading">My <span>Education</span></h1>
+    <div class="tl-line">
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2019 — 2023</p>
+                <p class="tl-degree">B.Tech — Computer Science & Engineering</p>
+                <p class="tl-school">Sree Chitra Thirunal College of Engineering</p>
+                <span class="tl-badge">CGPA: 9.31 / 10</span>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2017 — 2019</p>
+                <p class="tl-degree">Higher Secondary (Class XII)</p>
+                <p class="tl-school">Believer's Church Residential School</p>
+                <span class="tl-badge">93.6%</span>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2016 — 2017</p>
+                <p class="tl-degree">Secondary (Class X)</p>
+                <p class="tl-school">Believer's Church Residential School</p>
+                <span class="tl-badge">CGPA: 9 / 10</span>
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </section>
+    <section id="experience">
+        <div id="experience-box">
+            <h1 class="experience-boxes">
+                Experience
+            </h1>
+        </div>
+    </section>
+    <section id="contact">
+        <div id="contact-box">
+            <div class="contact-links">
+                <h1 class="contact-heading">Contact <span>Me</span></h1>
+                <p class="contact-availability">🟢 Available for opportunities</p>
+                <a href="mailto:wrenoswin01@gmail.com" class="btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    wrenoswin01@gmail.com
+                </a>
+                <a class="btn">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 80754 56734
+                </a>
+                <a class="contact-item no-hover">
+                    <i class="fa-solid fa-location-dot"></i> Thiruvananthapuram, India
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Designed with ❤️ by <span>Wren</span></p>
+        <p>© 2026 Wren Oswin. All rights reserved.</p>
+    </footer>
+
+
+<script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    // active on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // active on scroll
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            const top = window.scrollY;
+            const offset = section.offsetTop - 200;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
+
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                document.querySelector(`nav a[href="#${id}"]`)?.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
