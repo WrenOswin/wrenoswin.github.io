@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Portfolio Website</title>
-
 </head>
 
 
@@ -35,7 +34,7 @@
                 <a href="https://github.com/WrenOswin" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com/wrenoswin/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="files\Wren_Resume.pdf" class="btn">My Resume</a>
+            <a href="files\Wren_Resume.pdf" target="_blank" class="btn">My Resume</a>
         </div>
     </section>
     <section id="skills">
@@ -114,32 +113,38 @@
     </footer>
 
 
-<script>
-    const navLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
-
-    // active on click
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
+    <script>
+        history.scrollRestoration = "manual"
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+            history.replaceState(null, '', '#home');
         });
-    });
 
-    // active on scroll
-    window.addEventListener('scroll', () => {
-        sections.forEach(section => {
-            const top = window.scrollY;
-            const offset = section.offsetTop - 200;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
 
-            if (top >= offset && top < offset + height) {
+        // active on click
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
                 navLinks.forEach(l => l.classList.remove('active'));
-                document.querySelector(`nav a[href="#${id}"]`)?.classList.add('active');
-            }
+                this.classList.add('active');
+            });
         });
-    });
-</script>
+
+        // active on scroll
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const top = window.scrollY;
+                const offset = section.offsetTop - 200;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    document.querySelector(`nav a[href="#${id}"]`)?.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
