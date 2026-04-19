@@ -94,12 +94,6 @@ footer span {
     transition: 0.3s ease;
 }
 
-@media (max-width: 995px) {
-    .hamburger {
-        display: flex;
-    }
-}
-
 .nav-logo:hover {
     border-bottom: none !important;
 }
@@ -137,58 +131,7 @@ nav a.active{
     border-bottom: 3px solid #b74b4b;
 }
 
-@media(max-width: 995px) {
-    nav {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(10, 10, 10, 0.97);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(183, 75, 75, 0.3);
-        padding: 1rem 0;
-        z-index: 99;
-        margin-left: 0;
-    }
 
-    nav.active {
-        display: flex;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 0;
-        padding: 1.5rem 0;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
-        border-left: none;
-        border-right: none;
-        border-top: none;
-    }
-
-    nav a:last-child {
-        border-bottom: none;
-    }
-
-    nav a:hover,
-    nav a.active {
-        background: rgba(183, 75, 75, 0.08);
-        color: #b74b4b;
-        border-radius: 0;
-        padding: 1.5rem 0;
-        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
 
 section{
     min-height: 100vh;
@@ -711,5 +654,58 @@ span{
     .home-img img{
         width: 70vw;
         margin-top: 4rem;
+    }
+}
+
+@media(max-width: 995px) {
+    nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(10, 10, 10, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(183, 75, 75, 0.3);
+        padding: 1rem 0;
+        z-index: 99;
+        margin-left: 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 0;
+        padding: 1.5rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: rgba(183, 75, 75, 0.08);
+        color: #b74b4b;
+        border-radius: 0;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+    }
+
+    .hamburger {
+        display: flex;
     }
 }
