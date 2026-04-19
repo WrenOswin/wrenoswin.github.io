@@ -40,11 +40,11 @@ header {
     width: 100%;
     height: 12%;
     padding: 1rem 9%;
-    background: rgba(255, 255, 255, 0.05);  /* 👈 replaces background-color */
-    backdrop-filter: blur(12px);             /* 👈 frosted glass */
-    -webkit-backdrop-filter: blur(12px);     /* 👈 Safari support */
-    border-bottom: 1px solid rgba(183, 75, 75, 0.3);  /* 👈 red accent line */
-    box-shadow: 0 4px 30px rgba(183, 75, 75, 0.1);    /* 👈 subtle red glow */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(183, 75, 75, 0.3);
+    box-shadow: 0 4px 30px rgba(183, 75, 75, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +68,32 @@ footer span {
   float: right;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    border-bottom: none !important;
+}
+
+.nav-logo:hover {
+    border-bottom: none !important;
+}
+
+.nav-logo svg circle {
+    transition: 0.3s ease;
+}
+
+.nav-logo:hover svg circle {
+    fill: #b74b4b;
+}
+
+.nav-logo:hover svg text {
+    fill: black;
+}
+
 nav {
+    display: flex;
+    align-items: center;
     margin-left: auto;
 }
 
@@ -140,7 +165,7 @@ section{
 }
 
 .contact-item span {
-    color: white;  /* 👈 override global span color */
+    color: white;  
 }
 
 #contact {
@@ -152,13 +177,13 @@ section{
 #contact-box {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* or center if you want it centered */
+    align-items: flex-start;  
     gap: 2rem;
 }
 
 .contact-links {
     display: flex;
-    flex-direction: column;  /* 👈 stack vertically */
+    flex-direction: column;  
     gap: 1.5rem;
 }
 
@@ -208,7 +233,7 @@ span{
 }
 
 .contact-item i {
-    color: #b74b4b;  /* 👈 makes all icons red consistently */
+    color: #b74b4b;  
 }
 
 .social-icons a{
@@ -269,7 +294,6 @@ span{
     max-width: 700px;
 }
 
-/* ── Skills ───────────────────────────────────────────── */
 
 .skills-group {
     margin-bottom: 2.5rem;
@@ -452,7 +476,7 @@ span{
 
 .contact-item {
     min-width: 35rem;
-    justify-content: flex-start;  /* keeps icon+text left inside the pill */
+    justify-content: flex-start;  
 }
 
 .contact-availability {
@@ -461,8 +485,6 @@ span{
     font-weight: 500;
     margin-bottom: 1rem;
 }
-
-/* ── Experience ───────────────────────────────────────── */
 
 #experience {
     display: flex;
@@ -553,7 +575,6 @@ span{
     margin-top: 1.4rem;
 }
 
-/* location shouldn't look clickable */
 .no-hover {
     cursor: default;
     pointer-events: none;
@@ -596,10 +617,10 @@ span{
         typing 7s steps(30) infinite;
 }
 
-.typing-text span::before{
+.typing-text span::before {
     content: "Software Developer";
     color: #b74b4b;
-    animation: words 28s infinite;
+    animation: words 21s steps(1) infinite;
 }
 
 .typing-text span::after {
@@ -607,7 +628,7 @@ span{
     background-color: black;
     position: absolute;
     height: 100%;
-    right: 0;                 /* was right: -8 (missing px) */
+    right: 0;
 }
 
 @keyframes cursor {
@@ -615,19 +636,11 @@ span{
     to   { border-right: 3px solid #b74b4b; }
 }
 
-@keyframes words{
-    0%, 25%{
-        content: "Developer";
-    }
-    26%, 50%{
-        content: "Web Designer";
-    }
-    51%, 75%{
-        content: "Photographer";
-    }
-    76%, 100%{
-        content: "Competitive Programmer";
-    }
+@keyframes words {
+    0%        { content: "Software Developer"; }
+    33.334%   { content: "OTT App Developer"; }
+    66.667%   { content: "Problem Solver"; }
+    100%      { content: "Software Developer"; }
 }
 
 @media (max-width: 1000px){
