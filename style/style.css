@@ -140,19 +140,19 @@ nav a.active{
 @media(max-width: 995px) {
     nav {
         position: fixed;
-        top: 12%;
+        top: 70px;
         left: 0;
         width: 100%;
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 0;
         background: rgba(10, 10, 10, 0.97);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(183, 75, 75, 0.3);
-        padding: 2rem 0;
+        padding: 1rem 0;
         z-index: 99;
+        margin-left: 0;
     }
 
     nav.active {
@@ -163,10 +163,13 @@ nav a.active{
         display: block;
         font-size: 2rem;
         margin: 0;
-        padding: 1.4rem 0;
+        padding: 1.5rem 0;
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+        border-left: none;
+        border-right: none;
+        border-top: none;
     }
 
     nav a:last-child {
@@ -177,9 +180,13 @@ nav a.active{
     nav a.active {
         background: rgba(183, 75, 75, 0.08);
         color: #b74b4b;
-        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
         border-radius: 0;
-        padding: 1.4rem 0;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+    }
+
+    .hamburger {
+        display: flex;
     }
 }
 
