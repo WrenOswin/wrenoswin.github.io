@@ -258,6 +258,89 @@ span{
     max-width: 700px;
 }
 
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills-box {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ── Skills ───────────────────────────────────────────── */
+
+.skills-group {
+    margin-bottom: 2.5rem;
+}
+
+.skills-group-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 1.2rem;
+}
+
+.skills-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 99px;
+    border: 1px solid rgba(183, 75, 75, 0.25);
+    background: rgba(183, 75, 75, 0.05);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+    transition: border-color 0.2s ease, background 0.2s ease;
+    cursor: default;
+}
+
+.skill-pill::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b74b4b;
+    flex-shrink: 0;
+}
+
+.skill-pill:hover {
+    border-color: rgba(183, 75, 75, 0.65);
+    background: rgba(183, 75, 75, 0.1);
+}
+
+.skills-divider {
+    height: 1px;
+    background: rgba(183, 75, 75, 0.15);
+    margin-bottom: 2.5rem;
+}
+
+.skills-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.skills-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #b74b4b;
+    margin-top: 0.8rem;
+}
+
 .education-heading {
     font-size: 4rem;
     font-weight: 700;
@@ -377,6 +460,97 @@ span{
     color: #b74b4b;
     font-weight: 500;
     margin-bottom: 1rem;
+}
+
+/* ── Experience ───────────────────────────────────────── */
+
+#experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience-box {
+    width: 100%;
+    max-width: 700px;
+}
+
+.experience-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.experience-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #b74b4b;
+    margin-top: 0.8rem;
+}
+
+.exp-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+.exp-role {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+}
+
+.exp-period {
+    font-size: 1.2rem;
+    color: #b74b4b;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    background: rgba(183, 75, 75, 0.1);
+    border: 1px solid rgba(183, 75, 75, 0.3);
+}
+
+.exp-company {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1.4rem;
+}
+
+.exp-company span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.exp-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 1.6rem;
+}
+
+.exp-bullets li {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    padding-left: 0.4rem;
+}
+
+.exp-bullets li::marker {
+    color: #b74b4b;
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
 }
 
 /* location shouldn't look clickable */
