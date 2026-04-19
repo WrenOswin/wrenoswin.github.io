@@ -21,9 +21,12 @@
             fill="#b74b4b" font-size="18" font-family="Poppins, sans-serif" font-weight="600">W</text>
             </svg>
         </a>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
-            <!-- <a href="#home" class="active"> Home</a>
-              -->
             <a href="#skills" >Skills</a>
             <a href="#education" >Education</a>
             <a href="#experience" >Experience</a>
@@ -217,6 +220,20 @@
 
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // close nav when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
     history.scrollRestoration = "manual";
     window.addEventListener('load', () => {
         window.scrollTo(0, 0);

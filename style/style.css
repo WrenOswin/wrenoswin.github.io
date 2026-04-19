@@ -75,6 +75,31 @@ footer span {
     border-bottom: none !important;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    padding: 4px;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #b74b4b;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 995px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
 .nav-logo:hover {
     border-bottom: none !important;
 }
