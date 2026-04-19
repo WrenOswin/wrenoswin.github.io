@@ -137,36 +137,49 @@ nav a.active{
     border-bottom: 3px solid #b74b4b;
 }
 
-@media(max-width:995px){
-    nav{
-        position: absolute;
+@media(max-width: 995px) {
+    nav {
+        position: fixed;
+        top: 12%;
+        left: 0;
+        width: 100%;
         display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background: rgba(10, 10, 10, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(183, 75, 75, 0.3);
+        padding: 2rem 0;
+        z-index: 99;
     }
 
-    nav.active{
-        display: block;
+    nav.active {
+        display: flex;
     }
 
-    nav a{
+    nav a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 0;
+        padding: 1.4rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
     }
 
     nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+    nav a.active {
+        background: rgba(183, 75, 75, 0.08);
+        color: #b74b4b;
+        border-bottom: 1px solid rgba(183, 75, 75, 0.1);
+        border-radius: 0;
+        padding: 1.4rem 0;
     }
 }
 
