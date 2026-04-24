@@ -239,6 +239,26 @@ span{
     color: #b74b4b;
 }
 
+.gate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1.6rem;
+    border-radius: 99px;
+    border: 1px solid rgba(183, 75, 75, 0.5);
+    background: rgba(183, 75, 75, 0.1);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #b74b4b;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+}
+
+.gate-badge i {
+    font-size: 1.2rem;
+}
+
 .social-icons a:hover{
     color: black;
     transform: scale(1.3) translateY(-5px);
